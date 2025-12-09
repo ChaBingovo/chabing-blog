@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on 茶冰の小破站</title>
+        <link>https://www.chabing.net/page/</link>
+        <description>Recent content in Pages on 茶冰の小破站</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>茶冰の小破站</copyright>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.chabing.net/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>归档</title>
+        <link>https://www.chabing.net/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.chabing.net/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://www.chabing.net/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.chabing.net/about/</guid>
+        <description>&lt;img src="https://www.chabing.net/about/page.png" alt="Featured image of post 关于" /&gt;&lt;p&gt;如网站副标题所见，是一个分享经验与技术的小破站&lt;/p&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;关于本站
+&lt;/h2&gt;&lt;p&gt;本博客使用&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt;构建，主题&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-stack&lt;/a&gt;，字体&lt;a class=&#34;link&#34; href=&#34;https://hyperos.mi.com/font/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MiSans&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对主题进行了一些配置和修改，有时间会单独出一篇博客说明&lt;/p&gt;
+&lt;p&gt;中国大陆站点部署在ESA Pages&lt;/p&gt;
+&lt;p&gt;境外部署在CloudFlare pages&lt;/p&gt;
+&lt;p&gt;得益于纯静态博客，网站可以做到全球绿
+&lt;img src=&#34;https://nbs3.chabing.net/2025/10/28/68ffd5cf05b44.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;webtest.webp&#34;
+	
+	
+		data-action=&#34;zoom&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://www.chabing.net/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.chabing.net/links/</guid>
+        <description>&lt;p&gt;或许可以评论添加你的网站&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://www.chabing.net/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.chabing.net/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

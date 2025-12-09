@@ -50,3 +50,7 @@ categories:
 适未成年化：⭐️⭐️
 
 ## 附属信用卡
+
+``` python
+print("Hello, World!")
+```
