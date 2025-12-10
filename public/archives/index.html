@@ -15,6 +15,21 @@
 <meta name="twitter:description" content="">
     <link rel="shortcut icon" href="/favicon.ico" />
 <link href="/assets/css/zoom.css" rel="stylesheet">
+<script>
+(function(){
+  var origAppend = document.head.appendChild.bind(document.head);
+  document.head.appendChild = function(node){
+    try{
+      var href = node && node.href;
+      if(node && node.tagName === 'LINK' && node.rel === 'stylesheet' && typeof href === 'string' && href.indexOf('fonts.googleapis.com') !== -1){
+        return node;
+      }
+    }catch(e){}
+    return origAppend(node);
+  };
+})();
+</script>
+
     </head>
     <body class="template-archives">
     <script>

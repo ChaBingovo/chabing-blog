@@ -14,7 +14,22 @@
 <meta name="twitter:title" content="搜索">
 <meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://www.chabing.net/search/index.json">
     <link rel="shortcut icon" href="/favicon.ico" />
-<link href="/assets/css/zoom.css" rel="stylesheet"><link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
+<link href="/assets/css/zoom.css" rel="stylesheet">
+<script>
+(function(){
+  var origAppend = document.head.appendChild.bind(document.head);
+  document.head.appendChild = function(node){
+    try{
+      var href = node && node.href;
+      if(node && node.tagName === 'LINK' && node.rel === 'stylesheet' && typeof href === 'string' && href.indexOf('fonts.googleapis.com') !== -1){
+        return node;
+      }
+    }catch(e){}
+    return origAppend(node);
+  };
+})();
+</script>
+<link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
     <body class="template-search">
     <script>
