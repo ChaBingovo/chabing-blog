@@ -1,6 +1,8 @@
 ---
 title: 关于
 slug: "about"
+date: 2025-05-30
+lastmod: 2026-03-12
 image: page.png
 license: CC BY-NC-ND
 menu:
@@ -17,9 +19,7 @@ menu:
 
 对主题进行了一些配置和修改，有时间会单独出一篇博客说明
 
-中国大陆站点部署在ESA Pages
-
-境外部署在CloudFlare pages
+站点部署在ESA Pages
 
 得益于纯静态博客，网站可以做到全球绿
 ![webtest.webp](https://nbs3.chabing.net/2025/10/28/68ffd5cf05b44.webp)

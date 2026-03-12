@@ -10,7 +10,7 @@
 <meta property='og:description' content="本文主要演示如何配置dockerhub镜像加速，以解决镜像拉取超时等问题">
 <meta property='og:url' content='https://www.chabing.net/p/docker/'>
 <meta property='og:site_name' content='茶冰の小破站'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-05-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-28T00:00:00&#43;00:00'/><meta property='og:image' content='https://www.chabing.net/p/docker/page.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-05-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-12T00:00:00&#43;00:00'/><meta property='og:image' content='https://www.chabing.net/p/docker/page.png' />
 <meta name="twitter:title" content="如何使用DockerHub镜像加速器">
 <meta name="twitter:description" content="本文主要演示如何配置dockerhub镜像加速，以解决镜像拉取超时等问题"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://www.chabing.net/p/docker/page.png' />
@@ -398,7 +398,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -414,19 +414,7 @@
     
     
     <h2 id="选择dockerhub镜像加速地址">选择DockerHub镜像加速地址
-</h2><p>本站提供的镜像加速器地址</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://docker.chabing.top
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>​<strong>提示</strong>​：本站提供的镜像加速器是免费服务，稳定性远不如商业服务。对于生产环境，建议使用阿里云或腾讯云等提供的专属加速地址或自行搭建。</p>
-<p><strong>免责声明</strong>：用户在使用本站提供的镜像加速器时，因遵守法律法规，不得用于任何非法目的，否则后果自负。</p></blockquote>
-<p>其他镜像加速地址</p>
+</h2><p>常见镜像加速地址</p>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
@@ -482,7 +470,7 @@
 </span></span><span class="line"><span class="cl">sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;EOF
 </span></span></span><span class="line"><span class="cl"><span class="s">{
 </span></span></span><span class="line"><span class="cl"><span class="s">  &#34;registry-mirrors&#34;: [
-</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;https://docker.chabing.top&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;https://docker.1ms.run&#34;
 </span></span></span><span class="line"><span class="cl"><span class="s">  ]
 </span></span></span><span class="line"><span class="cl"><span class="s">}
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
@@ -505,7 +493,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.chabing.top&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.1ms.run&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -520,16 +508,16 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;registry-mirrors&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.chabing.top&#34;</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;registry-mirrors&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;https://docker.1ms.run&#34;</span><span class="p">]</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
 <blockquote>
-<p>以上配置中的https://docker.chabing.top可以修改为任意镜像加速器地址</p>
+<p>以上配置中的https://docker.1ms.run可以修改为任意镜像加速器地址</p>
 <p>PS：建议配置多个镜像加速器地址，以防止单个服务出现故障</p></blockquote>
 <h3 id="临时使用单次拉取镜像">临时使用（单次拉取镜像）
-</h3><p>直接在镜像名前添加 <code>docker.chabing.top/</code></p>
+</h3><p>直接在镜像名前添加 <code>docker.1ms.run/</code></p>
 <p>示例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -537,8 +525,8 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull linuxserver/firefox                    <span class="c1">#加速前拉取镜像</span>
-</span></span><span class="line"><span class="cl">docker pull docker.chabing.top/linuxserver/firefox <span class="c1">#加速后拉取镜像</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull linuxserver/firefox                             <span class="c1">#加速前拉取镜像</span>
+</span></span><span class="line"><span class="cl">docker pull docker.1ms.run/linuxserver/firefox     <span class="c1">#加速后拉取镜像</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -570,7 +558,7 @@
 
 
         <span>
-            最后更新于 Oct 28, 2025 00:00 UTC
+            最后更新于 Mar 12, 2026 00:00 UTC
         </span>
     </section></footer>
 
@@ -585,7 +573,7 @@
      
     
         
-    <script src="https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.min.js"></script>
+    <script src="https://registry.npmmirror.com/twikoo/1.7.2/files/dist/twikoo.min.js"></script>
 <div id="tcomment"></div>
 <style>
     .twikoo {
@@ -636,7 +624,9 @@
     <section class="copyright">
         &copy; 
         
-        2025 茶冰の小破站
+            2025 - 
+        
+        2026 茶冰の小破站
     </section>
     
     <section class="powerby">
