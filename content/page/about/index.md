@@ -22,4 +22,7 @@ menu:
 站点部署在ESA Pages
 
 得益于纯静态博客，网站可以做到全球绿
-![webtest.webp](https://nbs3.chabing.net/2025/10/28/68ffd5cf05b44.webp)
+
+## 关于茶冰
+
+头像是[QuAn_](https://www.pixiv.net/users/6657532)画的[阿米娅](https://www.pixiv.net/artworks/80143041)，以后或许会考虑自己画？

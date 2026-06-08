@@ -4,11 +4,11 @@ description: 本文主要演示如何配置dockerhub镜像加速，以解决镜�
 slug: docker
 date: 2025-05-30
 lastmod: 2026-03-12
-image: page.png
+image: https://oss.chabing.net/2026/06/08/6a26e62887864.webp
 categories:
     - 教程
 ---
-## 选择DockerHub镜像加速地址
+# 选择DockerHub镜像加速地址
 
 常见镜像加速地址
 
@@ -19,13 +19,13 @@ categories:
 |[1panel](https://1panel.cn/docs/user_manual/containers/setting/#1)|https://docker.1panel.live|
 |[阿里云](https://cr.console.aliyun.com/)（需登录，系统分配）|https://<your_code>.mirror.aliyuncs.com|
 
-## 使用DockerHub镜像加速地址
+# 使用DockerHub镜像加速地址
 
 选好你的镜像加速地址后有两种使用方式：
 
-### 长期使用（修改配置文件）
+## 长期使用（修改配置文件）
 
-#### Linux配置
+### Linux配置
 
 ``` bash
 sudo mkdir -p /etc/docker
@@ -40,7 +40,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-#### MAC配置
+### MAC配置
 
 1. 打开 Docker Desktop
 2. 点击顶部菜单栏 Docker 图标 → Preferences
@@ -53,7 +53,7 @@ sudo systemctl restart docker
 }
 ```
 
-#### Windows配置
+### Windows配置
 
 1. 右键点击系统托盘中的 Docker 图标
 2. 选择 Change settings
@@ -67,7 +67,7 @@ sudo systemctl restart docker
 >
 > PS：建议配置多个镜像加速器地址，以防止单个服务出现故障
 
-### 临时使用（单次拉取镜像）
+## 临时使用（单次拉取镜像）
 
 直接在镜像名前添加 `docker.1ms.run/`
 

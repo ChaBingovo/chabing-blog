@@ -44,7 +44,7 @@ params:
 
     footer:
         since: 2025
-        customText: <a href="https://ipw.cn/ipv6webcheck/?site=www.chabing.net" target="_blank">本站已支持IPV6访问</a> <a href="https://http3.wcode.net/?q=www.chabing.net" target="_blank">本站已支持HTTP/3</a><br><a href="https://beian.miit.gov.cn/" target="_blank">新ICP备2025019760号-1</a><br><a href="https://beian.mps.gov.cn/#/query/webSearch?code=65280102000190" rel="noreferrer" target="_blank">新公网安备65280102000190号</a>
+        customText: <a href="https://ipv6test.wcode.net/?q=www.chabing.net" target="_blank">本站已支持IPV6访问</a> <a href="https://http3.wcode.net/?q=www.chabing.net" target="_blank">本站已支持HTTP/3</a><br><a href="https://beian.miit.gov.cn/" target="_blank">新ICP备2025019760号-1</a><br><a href="https://beian.mps.gov.cn/#/query/webSearch?code=65280102000190" rel="noreferrer" target="_blank">新公网安备65280102000190号</a>
 
     dateFormat:
         published: Jan 02, 2006
@@ -135,7 +135,7 @@ menu:
 
         -  identifier: email
            name: 3:email
-           url: mailto:c@chab.ing
+           url: mailto:chabing@duck.com
            params:
                icon: mail
 
@@ -177,7 +177,7 @@ markup:
     tableOfContents:
         endLevel: 4
         ordered: true
-        startLevel: 2
+        startLevel: 1
     highlight:
         noClasses: false
         codeFences: true
