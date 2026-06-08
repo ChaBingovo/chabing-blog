@@ -71,7 +71,7 @@ params:
         provider: twikoo
 
         twikoo:
-            envId: https://twikoo.chabing.net/
+            envId: https://twikoo.chabing.net
             el: 'tcomment'
     widgets:
         homepage:
