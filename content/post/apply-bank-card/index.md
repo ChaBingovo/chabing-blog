@@ -4,7 +4,7 @@ description: 本文主要推荐未成年办银行卡的经验和未成年办卡�
 slug: apply-bank-card
 date: 2026-05-15
 draft: true
-image: https://oss.chabing.net/2026/06/08/6a26e0ea999a6.webp
+image: https://oss.chabing.net/2026/06/09/6a26eb45bb2d1.webp
 categories:
     - 生活
     - 经验
