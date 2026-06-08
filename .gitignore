@@ -1,6 +1,3 @@
-# Hugo theme source
-themes/Stack/
-
 # Hugo build output
 public/
 resources/_gen/
