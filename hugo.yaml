@@ -1,5 +1,5 @@
 baseurl: https://www.chabing.net/
-languageCode: zh-CN
+locale: zh-CN
 theme: Stack
 title: 茶冰の小破站
 copyright: 茶冰の小破站
@@ -14,7 +14,7 @@ hasCJKLanguage: true
 
 languages:
     zh-cn:
-        languageName: 中文
+        label: 中文
         title: 茶冰の小破站
         weight: 2
         params:

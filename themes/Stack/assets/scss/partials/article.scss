@@ -33,15 +33,6 @@
                 }
             }
         }
-
-        @for $i from 1 through length($defaultTagBackgrounds) {
-            &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
-                .article-category a {
-                    background: nth($defaultTagBackgrounds, $i);
-                    color: nth($defaultTagColors, $i);
-                }
-            }
-        }
     }
 }
 
@@ -131,6 +122,7 @@
 .article-tags {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
     a {
         color: var(--accent-color-text);
