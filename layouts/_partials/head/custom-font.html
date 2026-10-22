@@ -1,14 +1,17 @@
 {{- /*
     站点定制：用本地 MiSans 替代主题默认从 fonts.googleapis.com 加载的 Lato。
     （v4 主题的 head/custom-font.html 会静态请求 Google Fonts，这里整体覆盖掉）
+
+    字体使用 WOFF2（由 assets/font/MiSans-Normal.ttf 转换而来，7.8MB -> 3.9MB）。
+    TTF 原件保留在 assets/font/ 作为源文件，但不再被引用，Hugo 不会发布它。
 */ -}}
-{{- $font := resources.Get "font/MiSans-Normal.ttf" -}}
+{{- $font := resources.Get "font/MiSans-Normal.woff2" -}}
 {{- with $font }}
-<link rel="preload" as="font" type="font/ttf" href="{{ .RelPermalink }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ .RelPermalink }}" crossorigin>
 <style>
   @font-face {
     font-family: 'MiSans';
-    src: url({{ .RelPermalink }}) format('truetype');
+    src: url({{ .RelPermalink }}) format('woff2');
     font-display: swap;
   }
 
