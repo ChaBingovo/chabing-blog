@@ -4,16 +4,16 @@ theme: Stack
 title: 茶冰の小破站
 copyright: 茶冰の小破站
 
-# Theme i18n support
-# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: zh-cn
+# Theme i18n support (v4)
+# Available values: ar be bg bn ca cs de el en es fa fr hi hu id it ja ko nl oc pl pt-br pt-pt ru sk th tr uk vi zh zh-hant-hk zh-hant-tw
+DefaultContentLanguage: zh
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: true
 
 languages:
-    zh-cn:
+    zh:
         label: 中文
         title: 茶冰の小破站
         weight: 2
@@ -38,7 +38,6 @@ permalinks:
 params:
     mainSections:
         - post
-    featuredImageField: image
     rssFullContent: true
     favicon: favicon.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
@@ -53,10 +52,7 @@ params:
     sidebar:
         emoji: 
         subtitle: 一个分享经验与技术的小破站
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.jpg
+        avatar: img/avatar.jpg
 
     article:
         math: false
@@ -72,7 +68,6 @@ params:
 
         twikoo:
             envId: https://twikoo.chabing.net
-            el: 'tcomment'
     widgets:
         homepage:
             - type: search
@@ -96,12 +91,6 @@ params:
             # Available values: summary, summary_large_image
             card: summary_large_image
 
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
-
     colorScheme:
         # Display toggle
         toggle: true
@@ -110,8 +99,6 @@ params:
         default: auto
 
     imageProcessing:
-        cover:
-            enabled: true
         content:
             enabled: true
 ### Custom menu
@@ -125,24 +112,28 @@ menu:
           name: 1:bilibili
           url: https://space.bilibili.com/1302913521
           params:
+              newTab: true
               icon: brand-bilibili
 
         - identifier: telegram
           name: 2:telegram
           url: https://t.me/chabingovo
           params:
+              newTab: true
               icon: brand-telegram
 
         -  identifier: email
            name: 3:email
            url: mailto:chabing@duck.com
            params:
+               newTab: true
                icon: mail
 
         -  identifier: rss
            name: 4:rss
            url: /index.xml
            params:
+              newTab: true
               icon: rss
 
 

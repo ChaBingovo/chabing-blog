@@ -1,24 +1,8 @@
-#Vibrant:
-#    - src: /assets/js/vibrant.min.js
-#      integrity: sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=
-#      type: script
-
+# v4 主题格式：PhotoSwipe 需要 Style / Core / Lightbox 三个地址（使用 v5 ESM 版本）
 PhotoSwipe:
-    - src: https://lib.baomitu.com/photoswipe/4.1.3/photoswipe.min.js
-      integrity: sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=
-      type: script
-      defer: true
-
-    - src: https://lib.baomitu.com/photoswipe/4.1.3/photoswipe-ui-default.min.js
-      integrity: sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=
-      type: script
-      defer: true
-
-    - src: https://lib.baomitu.com/photoswipe/4.1.3/default-skin/default-skin.min.css
-      type: style
-
-    - src: https://lib.baomitu.com/photoswipe/4.1.3/photoswipe.min.css
-      type: style
+    Style: https://lib.baomitu.com/photoswipe/5.4.4/photoswipe.css
+    Core: https://lib.baomitu.com/photoswipe/5.4.4/photoswipe.esm.min.js
+    Lightbox: https://lib.baomitu.com/photoswipe/5.4.4/photoswipe-lightbox.esm.min.js
 
 KaTeX:
     - src: https://lib.baomitu.com/KaTeX/0.16.9/katex.min.css
