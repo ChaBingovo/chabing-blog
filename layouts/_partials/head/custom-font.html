@@ -1,0 +1,21 @@
+{{- /*
+    站点定制：用本地 MiSans 替代主题默认从 fonts.googleapis.com 加载的 Lato。
+    （v4 主题的 head/custom-font.html 会静态请求 Google Fonts，这里整体覆盖掉）
+*/ -}}
+{{- $font := resources.Get "font/MiSans-Normal.ttf" -}}
+{{- with $font }}
+<link rel="preload" as="font" type="font/ttf" href="{{ .RelPermalink }}" crossorigin>
+<style>
+  @font-face {
+    font-family: 'MiSans';
+    src: url({{ .RelPermalink }}) format('truetype');
+    font-display: swap;
+  }
+
+  /* 用 html:root 提高优先级，确保覆盖主题 style.css 里后出现的 :root 默认值 */
+  html:root {
+    --base-font-family: 'MiSans', var(--sys-font-family), sans-serif;
+    --code-font-family: 'MiSans', Menlo, Consolas, 'Courier New', monospace;
+  }
+</style>
+{{- end }}
