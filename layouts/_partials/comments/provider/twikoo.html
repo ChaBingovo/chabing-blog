@@ -40,6 +40,45 @@
         background-color: var(--body-background) !important;
         color: var(--body-text-color) !important;
     }
+
+    /* Stack 把 html 字号设为 62.5%（1rem = 10px），而 Twikoo 2.x 的 UI 按 1rem = 16px 设计，
+       直接用 rem 会渲染成 8~9px。这里按 16px 基准还原关键元素的字号。 */
+    .twikoo .tk-input,
+    .twikoo .tk-input__inner,
+    .twikoo .tk-button {
+        font-size: 14px;
+    }
+    .twikoo .tk-input--small .tk-input__inner,
+    .twikoo .tk-input--small .tk-input-group__prepend,
+    .twikoo .tk-input--small .tk-input-group__append,
+    .twikoo div.code-toolbar > .toolbar {
+        font-size: 13px;
+    }
+    .twikoo .tk-input--mini .tk-input__inner,
+    .twikoo .tk-input--mini .tk-input-group__prepend,
+    .twikoo .tk-input--mini .tk-input-group__append,
+    .twikoo .tk-input__count,
+    .twikoo .tk-button--small,
+    .twikoo .tk-button--mini,
+    .twikoo .tk-action-count,
+    .twikoo .tk-sort-item,
+    .twikoo .tk-error__toggle,
+    .twikoo .tk-error__detail {
+        font-size: 12px;
+    }
+    .twikoo .tk-button--large,
+    .twikoo .tk-panel-logout {
+        font-size: 16px;
+    }
+    .twikoo .tk-comments-title,
+    .twikoo .tk-admin-config-group-title,
+    .twikoo .tk-admin-import-label,
+    .twikoo .tk-login-title {
+        font-size: 20px;
+    }
+    .twikoo .tk-panel-title {
+        font-size: 24px;
+    }
 </style>
 
 {{- with .Site.Params.comments.twikoo -}}
