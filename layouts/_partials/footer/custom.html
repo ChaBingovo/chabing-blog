@@ -1,2 +1,3 @@
-{{/* 字体已移到 head/custom-font.html，这里只保留图片缩放脚本 */}}
-<script src="/assets/js/zoom-vanilla.min.js"></script>
+{{/* 字体已移到 head/custom-font.html，这里只保留图片缩放脚本（指纹化后可长缓存） */}}
+{{- $zoomJS := resources.Get "js/zoom-vanilla.min.js" | minify | fingerprint }}
+<script src="{{ $zoomJS.RelPermalink }}" integrity="{{ $zoomJS.Data.Integrity }}" crossorigin="anonymous"></script>

@@ -2,10 +2,11 @@
     站点定制：用本地 MiSans 替代主题默认从 fonts.googleapis.com 加载的 Lato。
     （v4 主题的 head/custom-font.html 会静态请求 Google Fonts，这里整体覆盖掉）
 
-    字体使用 WOFF2（由 assets/font/MiSans-Normal.ttf 转换而来，7.8MB -> 3.9MB）。
-    TTF 原件保留在 assets/font/ 作为源文件，但不再被引用，Hugo 不会发布它。
+    字体已做子集化：全量 MiSans 8.2MB -> 子集 541KB（3500 常用汉字 + ASCII + 标点 + 站内实际用字）。
+    源文件 assets/font/MiSans-Normal.ttf 不再被引用，Hugo 不会发布它。
+    fingerprint 后文件名带哈希，可以安全地用 immutable 强缓存。
 */ -}}
-{{- $font := resources.Get "font/MiSans-Normal.woff2" -}}
+{{- $font := resources.Get "font/MiSans-Normal.woff2" | fingerprint -}}
 {{- with $font }}
 <link rel="preload" as="font" type="font/woff2" href="{{ .RelPermalink }}" crossorigin>
 <style>
