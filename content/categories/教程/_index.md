@@ -1,4 +1,4 @@
 ---
 title: "教程"
-image: "page.png"
+image: "page.webp"
 ---

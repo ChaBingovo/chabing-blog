@@ -1,0 +1,51 @@
+{{- /*
+    站点覆盖：在主题原有逻辑之外，给 OSS 外链特色图补 srcset。
+
+    主题只对本地/可处理资源生成 srcset；本站特色图放在 oss.chabing.net（阿里云 OSS），
+    主题拿不到 Resource，sizes 就成了空转。阿里云 OSS 支持 URL 上做实时图片处理，
+    所以这里直接拼 x-oss-process 生成多档宽度，零构建成本。
+
+    Params 与主题一致：
+        Resource: Hugo image resource object (Optional, for processing)
+        Widths: Slice of widths to generate for srcset
+        Attributes: Map of HTML attributes for the <img> tag
+*/ -}}
+
+{{- $resource := .Resource -}}
+{{- $widths := .Widths -}}
+{{- $attributes := .Attributes | default dict -}}
+{{- $src := index $attributes "src" -}}
+
+{{/* 1) 本地资源：沿用主题逻辑 */}}
+{{- if and $widths $resource (reflect.IsImageResourceProcessable $resource) -}}
+    {{- $srcset := slice -}}
+    {{- range $widths -}}
+        {{- if lt . $resource.Width -}}
+            {{- $resized := $resource.Resize (printf "%dx" .) -}}
+            {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if gt (len $srcset) 0 -}}
+        {{- $permalink := default $resource.RelPermalink (index $attributes "src") -}}
+        {{- $srcset = $srcset | append (printf "%s %dw" $permalink $resource.Width) -}}
+        {{- $attributes = merge $attributes (dict "srcset" (delimit $srcset ", ")) -}}
+    {{- end -}}
+{{/* 2) OSS 外链：用 x-oss-process 实时切片 */}}
+{{- else if and $src (strings.Contains $src "oss.chabing.net") -}}
+    {{- $sep := "?" -}}
+    {{- if strings.Contains $src "?" -}}{{- $sep = "&" -}}{{- end -}}
+    {{- $process := "x-oss-process=image/resize,w_%d/format,webp/quality,q_80" -}}
+    {{- $srcset := slice -}}
+    {{- range (slice 360 480 640 800 960 1200) -}}
+        {{- $u := printf "%s%s%s" $src $sep (printf $process .) -}}
+        {{- $srcset = $srcset | append (printf "%s %dw" $u .) -}}
+    {{- end -}}
+    {{- $base := printf "%s%s%s" $src $sep (printf $process 1200) -}}
+    {{- $attributes = merge $attributes (dict "src" $base "srcset" (delimit $srcset ", ")) -}}
+{{- end -}}
+
+<img {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+        {{- printf " %s=%q" (lower $k) (printf "%v" $v) | safeHTMLAttr -}}
+    {{- end -}}
+{{- end -}}>

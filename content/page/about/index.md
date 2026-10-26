@@ -3,7 +3,7 @@ title: 关于
 slug: "about"
 date: 2025-05-30
 lastmod: 2026-03-12
-image: page.png
+image: page.webp
 license: CC BY-NC-ND
 menu:
     main: 

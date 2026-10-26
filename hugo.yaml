@@ -31,6 +31,10 @@ services:
 pagination:
     pagerSize: 5
 
+# 站点只使用分类，移除 tags（全站无标签，避免空的 /tags/ 与 robots 规则冲突）
+taxonomies:
+    category: categories
+
 permalinks:
     post: /p/:slug/
     page: /:slug/
@@ -39,7 +43,7 @@ params:
     mainSections:
         - post
     rssFullContent: true
-    favicon: favicon.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: /favicon.ico # 必须带前导 /，否则子路径页面会解析成相对路径
 
     footer:
         since: 2025
@@ -52,7 +56,7 @@ params:
     sidebar:
         emoji: 
         subtitle: 一个分享经验与技术的小破站
-        avatar: img/avatar.jpg
+        avatar: img/avatar.webp
 
     article:
         math: false
@@ -142,9 +146,6 @@ related:
     threshold: 60
     toLower: false
     indices:
-        - name: tags
-          weight: 100
-
         - name: categories
           weight: 200
 
