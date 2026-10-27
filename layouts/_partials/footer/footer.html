@@ -13,7 +13,8 @@
     
     <section class="powerby">
         {{ with .Site.Params.footer.customText }}
-            {{ . | safeHTML }} <br/>
+            {{ . | safeHTML }}{{ with $sha }}<br />
+            <a class="gitinfo" href="{{ $repo }}/commit/{{ . }}" target="_blank" rel="noopener" title="查看本次部署对应的提交记录">{{- partial "helper/icon" "brand-github" -}}构建版本 {{ substr . 0 7 }}</a>{{ end }} <br/>
         {{ end }}
 
         {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
@@ -23,10 +24,4 @@
         {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
         {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}
     </section>
-
-    {{- with $sha }}
-    <section class="gitinfo">
-        <a href="{{ $repo }}/commit/{{ . }}" target="_blank" rel="noopener" title="查看本次部署对应的提交记录">构建版本 {{ substr . 0 7 }}</a>
-    </section>
-    {{- end }}
 </footer>

@@ -66,24 +66,25 @@ $codeblock-max-height: 25em;
 // =============================
 // 页脚：构建版本（Git 提交，可跳转）
 // =============================
-footer.site-footer {
-    .gitinfo {
-        margin-top: 2px;
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: var(--body-text-color);
-        opacity: .72;
+footer.site-footer .powerby a.gitinfo {
+    display: inline-flex;
+    align-items: center;
+    gap: .3em;
+    vertical-align: middle;
+    color: var(--body-text-color);
+    opacity: .8;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
 
-        a {
-            color: inherit;
-            text-decoration: underline dotted;
-            text-underline-offset: 2px;
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex: none;
+    }
 
-            &:hover {
-                color: var(--accent-color);
-                opacity: 1;
-            }
-        }
+    &:hover {
+        color: var(--accent-color);
+        opacity: 1;
     }
 }
 
