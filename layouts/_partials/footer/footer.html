@@ -1,0 +1,32 @@
+{{/* 覆盖主题 Stack 4.0.3 的 footer/footer.html，在页脚追加“构建版本”（当前部署的 Git 提交，可跳转 GitHub） */}}
+{{- $ThemeVersion := "4.0.3" -}}
+{{- $repo := site.Params.gitrepo | default "https://github.com/ChaBingovo/chabing-blog" -}}
+{{- $sha := site.Params.gitcommit -}}
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+    </section>
+    
+    <section class="powerby">
+        {{ with .Site.Params.footer.customText }}
+            {{ . | safeHTML }} <br/>
+        {{ end }}
+
+        {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
+        {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
+        {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
+
+        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
+        {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}
+    </section>
+
+    {{- with $sha }}
+    <section class="gitinfo">
+        <a href="{{ $repo }}/commit/{{ . }}" target="_blank" rel="noopener" title="查看本次部署对应的提交记录">构建版本 {{ substr . 0 7 }}</a>
+    </section>
+    {{- end }}
+</footer>

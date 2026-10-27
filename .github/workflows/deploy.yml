@@ -27,6 +27,9 @@ jobs:
 
       - name: Build
         run: hugo --gc --minify
+        env:
+          # 注入当前提交 SHA，供页脚“构建版本”显示并链接到 GitHub 提交页
+          HUGO_PARAMS_GITCOMMIT: ${{ github.sha }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

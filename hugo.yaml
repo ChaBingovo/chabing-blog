@@ -45,6 +45,10 @@ params:
     rssFullContent: true
     favicon: /favicon.ico # 必须带前导 /，否则子路径页面会解析成相对路径
 
+    # 页脚“构建版本”：CI 构建时通过环境变量 HUGO_PARAMS_GITCOMMIT 注入当前提交 SHA
+    gitrepo: https://github.com/ChaBingovo/chabing-blog
+    gitcommit:
+
     footer:
         since: 2025
         customText: <a href="https://ipv6test.wcode.net/?q=www.chabing.net" target="_blank">本站已支持IPV6访问</a> <a href="https://http3.wcode.net/?q=www.chabing.net" target="_blank">本站已支持HTTP/3</a><br><a href="https://beian.miit.gov.cn/" target="_blank">新ICP备2025019760号-1</a><br><a href="https://beian.mps.gov.cn/#/query/webSearch?code=65280102000190" rel="noreferrer" target="_blank">新公网安备65280102000190号</a>

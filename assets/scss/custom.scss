@@ -63,3 +63,27 @@ $codeblock-max-height: 25em;
     font-family: var(--code-font-family);
 }
 
+// =============================
+// 页脚：构建版本（Git 提交，可跳转）
+// =============================
+footer.site-footer {
+    .gitinfo {
+        margin-top: 2px;
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: var(--body-text-color);
+        opacity: .72;
+
+        a {
+            color: inherit;
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+
+            &:hover {
+                color: var(--accent-color);
+                opacity: 1;
+            }
+        }
+    }
+}
+
