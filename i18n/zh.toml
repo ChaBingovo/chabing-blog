@@ -1,0 +1,3 @@
+# 覆盖/补充主题 Stack 的 i18n 词条（与主题内 i18n/zh.toml 合并，同名键以本文件为准）
+[article]
+    updatedOn = "更新于"

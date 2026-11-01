@@ -1,0 +1,12 @@
+{{/* 覆盖主题 Stack 的 article/components/footer.html：
+     更新日期已合并到文章顶部 meta（见 article/components/details.html），此处不再重复显示“最后更新于”。 */}}
+<footer class="article-meta article-footer">
+    {{ partial "article/components/tags" . }}
+
+    {{ if and (.Site.Params.article.license.enabled) (not (eq .Params.license false)) }}
+    <section class="article-copyright inline-meta">
+        {{ partial "helper/icon" "copyright" }}
+        <span>{{ default .Site.Params.article.license.default .Params.license | markdownify }}</span>
+    </section>
+    {{ end }}
+</footer>

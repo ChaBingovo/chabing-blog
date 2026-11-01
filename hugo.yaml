@@ -53,14 +53,15 @@ params:
         since: 2025
         customText: <a href="https://ipv6test.wcode.net/?q=www.chabing.net" target="_blank">本站已支持IPV6访问</a> <a href="https://http3.wcode.net/?q=www.chabing.net" target="_blank">本站已支持HTTP/3</a><br><a href="https://beian.miit.gov.cn/" target="_blank">新ICP备2025019760号-1</a><br><a href="https://beian.mps.gov.cn/#/query/webSearch?code=65280102000190" rel="noreferrer" target="_blank">新公网安备65280102000190号</a>
 
+    # 显示格式：YYYY,MM月DD（Go 时间布局写法，例：2025,10月28）
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: "2006,01月02"
+        lastUpdated: "2006,01月02"
 
     sidebar:
         emoji: 
         subtitle: 一个分享经验与技术的小破站
-        avatar: img/avatar.webp
+        avatar: img/avatar.jpg
 
     article:
         math: false

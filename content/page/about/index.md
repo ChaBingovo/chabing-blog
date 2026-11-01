@@ -25,4 +25,6 @@ menu:
 
 ## 关于茶冰
 
+别名也叫茶喵，在国内平台都用茶喵这个名字，喵喵喵！
+
 头像是[QuAn_](https://www.pixiv.net/users/6657532)画的[阿米娅](https://www.pixiv.net/artworks/80143041)，以后或许会考虑自己画？
